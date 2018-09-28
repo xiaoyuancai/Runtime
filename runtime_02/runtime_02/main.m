@@ -8,13 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "Person.h"
-#import <objc/message.h>
 
 //objc_msgSend执行过程
 
+extern void test();
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
+        // 动态方法解析
+        
+        //class method
+        [Person walk];
+        
+        //instance method
+        [[Person new]eat];
+        
+        test();
+        
     }
     return 0;
 }

@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
         Person* p = objc_msgSend(objc_getClass("Person"), sel_registerName("new"));
         objc_msgSend(p, sel_registerName("run"));
         
-       // sel_registerName 等价于 @selector(run)，可以通过 NSLog(@"%p,%p",@selector(run),sel_registerName("run"))得到结果，如以如下等价
+       // sel_registerName 等价于 @selector(run)，可以通过 NSLog(@"%p,%p",@selector(run),sel_registerName("run"))得到结果，所以如下等价
         /**
          *等价
          objc_msgSend((p, sel_registerName("run"));

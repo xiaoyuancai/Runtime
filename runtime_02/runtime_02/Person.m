@@ -23,6 +23,9 @@ void sing(){
     NSLog(@"%s", __func__);
 }
 
+void test(){
+    NSLog(@"%s",__func__);
+}
 /**
  找不到类方法就会通过此方法进行动态解析
 
